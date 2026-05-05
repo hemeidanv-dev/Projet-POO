@@ -8,7 +8,7 @@ public class Pyro extends Mage{
     }
 
     @Override
-    public int calculerPoints(String[][] grille) {
+    public int calculerPoints(Element[][] grille) {
         int points = 0;
         int n = grille.length;
 

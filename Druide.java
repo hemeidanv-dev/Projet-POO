@@ -7,7 +7,7 @@ public class Druide extends Mage {
     private int y;
 
     @Override
-    public int calculerPoints(String[][] grille) {
+    public int calculerPoints(Element[][] grille) {
         int points = 0;
         int n = grille.length;
 

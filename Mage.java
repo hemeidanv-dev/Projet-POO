@@ -10,7 +10,7 @@ public abstract class Mage{
         this.element = element;
     }
 
-    public abstract int calculerPoints(String[][] grille);
+    public abstract int calculerPoints(Element[][] grille);
 
     public Element getElement() {
         return this.element;
