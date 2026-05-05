@@ -8,7 +8,7 @@ public class Hydro extends Mage {
         int points = 0;
         int n = grille.length;
 
-        //LIGNE
+        //ligne
         for (int j = 0; j < n; j++) {
             if (j == y) continue;
             if (Element.EAU.equals(grille[x][j])) {
@@ -16,7 +16,7 @@ public class Hydro extends Mage {
             }
         }
 
-        //COLONNE
+        //colonne
         for (int i = 0; i < n; i++) {
             if (i == x) continue;
             if (Element.EAU.equals(grille[i][y])) {
