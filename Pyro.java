@@ -16,7 +16,7 @@ public class Pyro extends Mage{
         int i = x - 1;
         int j = y - 1;
         while (i >= 0 && j >= 0) {
-            if (Element.FEU.equals(grille[i][j])) points++;
+            if (Element.FEU==(grille[i][j])) points++;
             i--; j--;
         }
 
@@ -24,7 +24,7 @@ public class Pyro extends Mage{
         i = x - 1;
         j = y + 1;
         while (i >= 0 && j < n) {
-            if (Element.FEU.equals(grille[i][j])) points++;
+            if (Element.FEU==(grille[i][j])) points++;
             i--; j++;
         }
 
@@ -32,7 +32,7 @@ public class Pyro extends Mage{
         i = x + 1;
         j = y - 1;
         while (i < n && j >= 0) {
-            if (Element.FEU.equals(grille[i][j])) points++;
+            if (Element.FEU==(grille[i][j])) points++;
             i++; j--;
         }
 
@@ -40,7 +40,7 @@ public class Pyro extends Mage{
         i = x + 1;
         j = y + 1;
         while (i < n && j < n) {
-            if (Element.FEU.equals(grille[i][j])) points++;
+            if (Element.FEU==(grille[i][j])) points++;
             i++; j++;
         }
 
