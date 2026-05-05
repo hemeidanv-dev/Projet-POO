@@ -47,12 +47,22 @@ public class Grille {
             //verif tour numero 1
             if(tour == 1){
                 grille[x][y]=element;
-            }else{
-                for(){
-                    
-                }
+            }else{ 
+                if(adjacent(x,y)){
+                    grille[x][y]=element;
+                }                
             }
         }
     }
+
+    
+    public boolean adjacent(int ligne, int col){
+        if (ligne - 1 >= 0 && grille[ligne - 1][col] != null) return true; // haut
+        if (ligne + 1 < 5  && grille[ligne + 1][col] != null) return true; // bas
+        if (col - 1 >= 0   && grille[ligne][col - 1] != null) return true; // gauche
+        if (col + 1 < 5    && grille[ligne][col + 1] != null) return true; // droite
+    return false;
+    }
+
 
 }
