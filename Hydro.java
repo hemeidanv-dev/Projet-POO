@@ -2,6 +2,8 @@ public class Hydro extends Mage {
     public Hydro(int x, int y) {
         super(x, y, Element.EAU);
     }
+    private int x;
+    private int y;
 
     @Override
     public int calculerPoints(String[][] grille) {

@@ -3,6 +3,9 @@ public class Druide extends Mage {
         super(x, y, Element.PLANTE);
     }
 
+    private int x;
+    private int y;
+
     @Override
     public int calculerPoints(String[][] grille) {
         int points = 0;
