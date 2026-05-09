@@ -10,9 +10,11 @@ public class Grille {
     }
 
     public void afficheGrille(){
-        System.out.println("_____________________");
-        System.out.println("|                   |");
+        System.out.println("   __1___2___3___4___5__");
+        System.out.println("   _____________________");
+        
         for(int i = 0; i < this.largeur; i++){
+            System.out.print(i+1 + "  ");
             for (int j = 0; j < this.hauteur; j++) {
                 //if(this.grille[i][j] == null){
                  //   System.out.print("   ");
@@ -23,11 +25,12 @@ public class Grille {
             System.out.print("|");
             System.out.println();
             if(i < 4){
-                System.out.println("|                   |");
+                System.out.print("| ");
+                System.out.println(" |                   |");
             }
         }
-        System.out.println("|                   |");
-        System.out.println("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾");
+        
+        System.out.println("   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾");
     }
 
     public int getHauteur(){
