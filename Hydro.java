@@ -2,8 +2,6 @@ public class Hydro extends Mage {
     public Hydro(int x, int y) {
         super(x, y, Element.EAU);
     }
-    private int x;
-    private int y;
 
     @Override
     public int calculerPoints(Element[][] grille) {
@@ -13,7 +11,7 @@ public class Hydro extends Mage {
         //ligne
         for (int j = 0; j < n; j++) {
             if (j == y) continue;
-            if (Element.EAU==(grille[x][j])) {
+            if (grille[i][j]==Element.EAU) {
                 points++;
             }
         }
@@ -21,7 +19,7 @@ public class Hydro extends Mage {
         //colonne
         for (int i = 0; i < n; i++) {
             if (i == x) continue;
-            if (Element.EAU==(grille[i][y])) {
+            if (grille[i][j]==Element.EAU) {
                 points++;
             }
         }

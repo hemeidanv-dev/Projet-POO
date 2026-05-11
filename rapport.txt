@@ -1,0 +1,28 @@
+DIAGRAMME UML
+
+class Mage
+- int x,y
+- Element element
++ Mage(int x, int y, Element element)
++ abstract int calculerPoints(Element[][] grille)
++ Element getElement()
+
+class Pyro extends Mage
++ Pyro(int x, int y)
++ int calculerPoints(Element[][] grille)
+
+class Hydro extends Mage
++ Hydro(int x, int y)
++ int calculerPoints(Element[][] grille)
+
+class Druide extends Mage
++ Druide(int x, int y)
++ int calculerPoints(Element[][] grille)
+
+Explication
+
+On a choisi une classe abstraite pour la classe mage car il y a des attributs communs (x, y, element). Cela permet de centraliser le
+constructeur et d'éviter la duplication de données.
+classe Pyro: verfications en 4 boucles while pour plus de visibilité.
+classe Hydro : verfications en 2 boucles en excluant la case du mage.
+classe Druide : Vérifivations manuelle des 8 cases pour éviter toute erreur ou problèmes même si ça prend plus de lignes.

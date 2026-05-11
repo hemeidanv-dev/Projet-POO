@@ -1,8 +1,8 @@
 public abstract class Mage{
-    private int x;
-    private int y;
+    protected int x;
+    protected int y;
     
-    private Element element;
+    protected Element element;
 
     public Mage(int x, int y, Element element) {
         this.x = x;
