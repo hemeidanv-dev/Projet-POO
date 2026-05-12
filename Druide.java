@@ -1,16 +1,21 @@
 public class Druide extends Mage {
-    public Druide(int x, int y) {
-        super(x, y, Element.PLANTE);
+    public Druide() {
+        super(Element.PLANTE); // associé à l'élément Plante
     }
 
     @Override
-    public int calculerPoints(Element[][] grille) {
+    public String getSymbole() {
+        return "D"; 
+    }
+
+    @Override
+    public int calculerPoints(Entite[][] grille, int x, int y) {
         int points = 0;
         int n = grille.length;
 
         // 1. Case juste au-dessus (x-1, y)
         if (x - 1 >= 0) {
-            if (grille[x - 1][y]==Element.plante) points++;
+            if (grille[x - 1][y]==Element.PLANTE) points++;
         }
 
         // 2. Case juste en-dessous (x+1, y)

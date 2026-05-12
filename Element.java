@@ -1,35 +1,31 @@
+public enum Element implements Entite{
+    FEU("F"), EAU("E"), PLANTE("P");
 
-public enum Element {
-    FEU("🔥", "F"), EAU("💧","E"), PLANTE("🌿","P");
-
-    private String emoji;
     private String symbole;
-    Element(String emoji, String symbole) {
-        this.emoji = emoji;
+
+    Element(String symbole) {
         this.symbole = symbole;
     }
 
-    public String getEmoji(){
-        return this.emoji;
-    }
-
-    public String getSymbole(){
-        return this.symbole;
-    }
+    @Override
+    public String getSymbole() { return this.symbole; }
 
     public static Element getElementAleatoire() {
         Element[] elements = Element.values();
         return elements[(int)(elements.length * Math.random())];
     }
 
-    public boolean domine(Element autre){
-        return switch (this) {
-            case FEU -> autre == PLANTE;
-            case EAU -> autre == FEU;
-            case PLANTE -> autre == EAU; 
- 
-        };
+    public boolean domine(Element autre) {
+        if (this == FEU    && autre == PLANTE) return true;
+        if (this == EAU    && autre == FEU)    return true;
+        if (this == PLANTE && autre == EAU)    return true;
+        return false;
     }
 
-
-};
+    public Element cible() {
+        if (this == FEU)    return PLANTE;
+        if (this == EAU)    return FEU;
+        if (this == PLANTE) return EAU;
+        return null;
+    }
+}

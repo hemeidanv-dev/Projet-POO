@@ -1,17 +1,23 @@
 public class Hydro extends Mage {
-    public Hydro(int x, int y) {
-        super(x, y, Element.EAU);
+    public Hydro() {
+        super(Element.EAU); // associé à l'élément Eau
     }
 
     @Override
-    public int calculerPoints(Element[][] grille) {
+    public String getSymbole() {
+        return "H"; 
+    }
+
+    @Override
+    public int calculerPoints(Entite[][] grille, int x, int y) {
+        
         int points = 0;
         int n = grille.length;
 
         //ligne
         for (int j = 0; j < n; j++) {
             if (j == y) continue;
-            if (grille[i][j]==Element.EAU) {
+            if (grille[x][j]==Element.EAU) {
                 points++;
             }
         }
@@ -19,7 +25,7 @@ public class Hydro extends Mage {
         //colonne
         for (int i = 0; i < n; i++) {
             if (i == x) continue;
-            if (grille[i][j]==Element.EAU) {
+            if (grille[i][y]==Element.EAU) {
                 points++;
             }
         }

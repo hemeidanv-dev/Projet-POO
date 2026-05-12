@@ -1,11 +1,16 @@
-public class Pyro extends Mage{
-
-    public Pyro(int x, int y) {
-        super(x, y, Element.FEU);
+public class Pyro extends Mage {
+    public Pyro() {
+        super(Element.FEU); // associé à l'élément Feu
     }
 
     @Override
-    public int calculerPoints(Element[][] grille) {
+    public String getSymbole() {
+        return "Y"; 
+    }
+
+    @Override
+    public int calculerPoints(Entite[][] grille, int x, int y) {
+
         int points = 0;
         int n = grille.length;
 

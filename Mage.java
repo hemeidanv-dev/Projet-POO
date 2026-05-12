@@ -1,18 +1,26 @@
-public abstract class Mage{
-    protected int x;
-    protected int y;
-    
+public abstract class Mage implements Entite {
     protected Element element;
 
-    public Mage(int x, int y, Element element) {
-        this.x = x;
-        this.y = y;
+    public Mage(Element element) {
         this.element = element;
     }
 
-    public abstract int calculerPoints(Element[][] grille);
-
     public Element getElement() {
-        return this.element;
+         return this.element;
+    }
+
+    @Override
+    public abstract String getSymbole();
+
+    public abstract int calculerPoints(Entite[][] grille, int x, int y);
+
+    public static Mage getMageAleatoire() {
+        int random = (int)(3 * Math.random());
+        return switch (random) {
+            case 0 -> new Pyro();
+            case 1 -> new Hydro();
+            case 2 -> new Druide();
+            default -> new Pyro();
+        };
     }
 }
